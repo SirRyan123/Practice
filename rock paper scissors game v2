@@ -1,4 +1,5 @@
 import random
+import sys
 
 def play():
     print('Welcome to Ryans Rock Paper Scissors Game!')
@@ -21,4 +22,25 @@ def compare(playerChoice,cpuChoice):
                ('scissors','rock') : False}
     return results[(playerChoice,cpuChoice)]
     
-play()
+def start_game():
+	begin = input("Would you like to play Ryans Rock, Paper, Scissors? Enter y for Yes, n for No ")
+	while begin != "y":
+		if begin == "n":
+			print("Okay. Have a good day.")
+			sys.exit()
+		else:
+			print("Please try again")
+			begin = input("Would you like to play Ryans Rock, Paper, Scissors? You know the drill. Enter y or n. ")
+	play()
+	while True:
+		begin = input('Wow! Nice job. Play again? ')
+		while begin != "y":
+			if begin == "n":
+				print("Oof, alrighty. Hope you had fun!")
+				sys.exit()
+			else:
+				print("Please try again")
+				begin = input("Play again? ")
+		play()
+
+start_game()
