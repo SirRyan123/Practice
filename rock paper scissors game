@@ -1,0 +1,24 @@
+import random
+
+def play():
+    print('Welcome to Ryans Rock Paper Scissors Game!')
+    p_choice = input("What do you choose?")
+    choices = {1 : 'rock', 2 : 'paper', 3 : 'scissors'}
+    cpu_choice = random.choice(('rock','paper','scissors'))
+    if p_choice == cpu_choice:
+        return print('Tie!')
+    if compare(p_choice,cpu_choice):
+        return print('You Win!')
+    else:
+        return print('You Lose!')
+
+def compare(playerChoice,cpuChoice):
+    results = {('paper','rock') : True,
+               ('paper','scissors') : False,
+               ('rock','paper') : False,
+               ('rock','scissors') : True,
+               ('scissors','paper') : True,
+               ('scissors','rock') : False}
+    return results[(playerChoice,cpuChoice)]
+    
+play()
