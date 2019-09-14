@@ -7,7 +7,7 @@ def play():
     choices = {1 : 'rock', 2 : 'paper', 3 : 'scissors'}
     cpu_choice = random.choice(('rock','paper','scissors'))
     if p_choice == cpu_choice:
-        return print('Tie!')
+        return print('Tie Game!')
     if compare(p_choice,cpu_choice):
         return print('You Win!')
     else:
