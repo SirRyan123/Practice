@@ -29,7 +29,7 @@ class Line:
         x1,y1 = self.coord1
         x2,y2 = self.coord2
 
-        firstPart = ((x2 - x1)**2 + (y2 - 1)**2)
+        firstPart = ((x2 - x1)**2 + (y2 - y1)**2)
 
         return (firstPart ** 0.5)
 
